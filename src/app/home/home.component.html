@@ -1,0 +1,41 @@
+
+ <nav class="navbar navbar-light" style="background-color: #04AA6D;">
+    <div class="container-fluid">
+      <h3 class="text-light primary py-3">USER</h3>
+        <div class="d-flex">
+          <button type="button" class="btn btn-success" (click)="showAdd()">Add</button>&nbsp;
+          <button type="button" class="btn btn-success" (click)="logout()">logout</button>
+        </div>
+    </div>
+</nav>
+<br/>
+
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12">
+          <table>
+              <tr>
+                  
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>email</th>
+                  <th>Password</th>
+                  <th>Action</th>
+              </tr>
+                 <tr *ngFor="let data of ListUserData"> 
+                 <td>{{data.fname}}</td>
+                <td>{{data.lname}}</td>
+                <td>{{data.Email}}</td>
+                <td>{{data.password}}</td>
+                  <td>
+                    <button class="btn btn-primary" routerLink="/Edit/{{data.id}}">Edit</button>
+                    <!-- <button  class="btn btn-primary" (click)="Update(data)"  >Edit</button>&nbsp;                 -->
+                    <button class="btn btn-danger" style="margin-left: 20px;" (click)="DeleteUsers(data)" >Delete</button>
+                  </td>
+              </tr>
+          </table>
+      </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,79 @@
+<form [formGroup]="formValue">
+  <div class="container">
+    <h1>Update Employee</h1>
+  <label for="email"><b>first name :</b></label>
+    <input type="text" placeholder="Enter first name" name="email" formControlName="fname"  required>
+    <br>
+     <small *ngIf="formValue.get('fname')?.invalid && formValue.get('fname')?.touched" > first Name is required</small>
+     <br>
+
+     <label for="email">
+      <b>last name</b></label>
+    <input type="text" placeholder="Enter last name" name="email" formControlName="lname"  required>
+    <br>
+    <small *ngIf="formValue.get('lname')?.invalid && formValue.get('lname')?.touched" > last Name is required</small>
+<br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email"  formControlName="Email" required>
+    <br>
+    <small *ngIf="formValue.get('Email')?.invalid && formValue.get('Email')?.touched" > email is required</small>
+<br>
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" formControlName="password"   required>
+    <br>
+    <small *ngIf="formValue.get('password')?.invalid && formValue.get('password')?.touched" > password is required</small>
+
+  
+    
+    <div class="clearfix">
+      <button type="submit" class="signupbtn"  (click)="updateData()">Save</button>
+      <button type="submit" class="signupbtn"  (click)="btnclose()">Close</button>
+    </div>
+  </div>
+ </form>
+<!--<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">>
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <h5 class="modal-title">Update</h5>
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+     <div class="modal-body" >
+         <form [formGroup]="formValue">
+             <div class="form-group">
+               <label for="exampleInputEmail1">First Name :</label>
+               <input type="text" formControlName="fName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+               <small *ngIf="formValue.get('fname')?.invalid && formValue.get('fname')?.touched" > first Name is required</small>
+             </div>
+             <div class="form-group">
+                 <label for="exampleInputEmail1">Last Name :</label>
+                 <input type="text" formControlName="lName" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                 <small *ngIf="formValue.get('lname')?.invalid && formValue.get('lname')?.touched" >Last Name is required</small>
+             </div>
+               <div class="form-group">
+                 <label for="exampleInputEmail1">Email :</label>
+                 <input type="email" formControlName="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                 <small *ngIf="formValue.get('Email')?.invalid && formValue.get('Email')?.touched" >Email is required</small> 
+             </div>
+             <div class="form-group">
+               <label for="exampleInputPassword1">Password</label>
+               <input type="password" formControlName="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
+               <small *ngIf="formValue.get('password')?.invalid && formValue.get('password')?.touched" >Password is required</small> 
+
+             </div>
+             
+           </form>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary">Save</button>
+       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     </div>
+   </div>
+ </div>
+</div>    
+
+
+
+-->
